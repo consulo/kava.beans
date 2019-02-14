@@ -14,4 +14,4 @@ This library provide Java9+ module information with one package export (**kava.b
 
 # Naming
 
-kava - it's ukrainian word wrote via english words, mean **coffee**
+kava - it's ukrainian word wrote via english characters, mean **coffee**
