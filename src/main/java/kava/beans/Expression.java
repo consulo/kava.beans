@@ -17,7 +17,7 @@
 
 package kava.beans;
 
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 
 public class Expression extends Statement
 {

@@ -21,8 +21,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-import org.apache.harmony.beans.BeansUtils;
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.BeansUtils;
+import kava.beans.internal.Messages;
 
 public class PropertyDescriptor extends FeatureDescriptor
 {

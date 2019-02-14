@@ -20,7 +20,7 @@ package kava.beans;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.TooManyListenersException;
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 
 public class EventSetDescriptor extends FeatureDescriptor
 {

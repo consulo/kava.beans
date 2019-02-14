@@ -19,8 +19,8 @@ package kava.beans;
 
 import java.lang.reflect.Method;
 
-import org.apache.harmony.beans.BeansUtils;
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.BeansUtils;
+import kava.beans.internal.Messages;
 
 public class IndexedPropertyDescriptor extends PropertyDescriptor
 {

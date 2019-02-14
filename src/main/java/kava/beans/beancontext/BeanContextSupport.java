@@ -37,7 +37,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
 
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 
 /**
  * This support class implements <code>BeanContext</code> interface. 

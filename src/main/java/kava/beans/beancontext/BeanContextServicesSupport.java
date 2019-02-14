@@ -28,7 +28,7 @@ import java.util.Locale;
 import java.util.TooManyListenersException;
 import java.util.Map.Entry;
 
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 
 /**
  * This support class implements <code>BeanContextServices</code> interface.

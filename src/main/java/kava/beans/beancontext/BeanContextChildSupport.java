@@ -29,7 +29,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 
 public class BeanContextChildSupport implements kava.beans.beancontext.BeanContextChild, kava.beans.beancontext.BeanContextServicesListener, Serializable {
 

@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 @SuppressWarnings("unchecked")
 public class BeanContextMembershipEvent extends BeanContextEvent
 {

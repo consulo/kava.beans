@@ -21,7 +21,7 @@
  * if this tool runs again. Better make changes in the template file.
  */
 
-package org.apache.harmony.beans.internal.nls;
+package kava.beans.internal;
 
 
 import java.security.AccessController;
@@ -29,8 +29,6 @@ import java.security.PrivilegedAction;
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-
-import org.apache.harmony.kernel.vm.VM;
 
 /**
  * This class retrieves strings from a resource bundle and returns them,
@@ -218,7 +216,7 @@ public class Messages {
     static public ResourceBundle setLocale(final Locale locale,
             final String resource) {
         try {
-            final ClassLoader loader = VM.bootCallerClassLoader();
+            final ClassLoader loader = Messages.class.getClassLoader();
             return (ResourceBundle) AccessController
                     .doPrivileged(new PrivilegedAction<Object>() {
                         public Object run() {
@@ -235,7 +233,7 @@ public class Messages {
         // Attempt to load the messages.
         try {
             bundle = setLocale(Locale.getDefault(),
-                    "org.apache.harmony.beans.internal.nls.messages"); //$NON-NLS-1$
+                    "kava.beans.internal"); //$NON-NLS-1$
         } catch (Throwable e) {
             e.printStackTrace();
         }

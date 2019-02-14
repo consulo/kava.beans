@@ -31,7 +31,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 
 public class Statement {
     private static final Object[] EMPTY_ARRAY = new Object[0];

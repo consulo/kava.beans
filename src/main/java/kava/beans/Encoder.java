@@ -17,23 +17,6 @@
 
 package kava.beans;
 
-import java.awt.Choice;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Insets;
-import java.awt.List;
-import java.awt.Menu;
-import java.awt.MenuBar;
-import java.awt.MenuShortcut;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.ScrollPane;
-import java.awt.SystemColor;
-import java.awt.font.TextAttribute;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -41,12 +24,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
-
-import javax.swing.Box;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JFrame;
-import javax.swing.JTabbedPane;
-import javax.swing.ToolTipManager;
 
 /**
  * The <code>Encoder</code>, together with <code>PersistenceDelegate</code>
@@ -106,35 +83,7 @@ public class Encoder {
         delegates.put(String.class, new StringPersistenceDelegate());
         delegates.put(Proxy.class, new ProxyPersistenceDelegate());
 
-        delegates.put(Choice.class, new AwtChoicePersistenceDelegate());
-        delegates.put(Color.class, new AwtColorPersistenceDelegate());
-        delegates.put(Container.class, new AwtContainerPersistenceDelegate());
-        delegates.put(Component.class, new AwtComponentPersistenceDelegate());
-        delegates.put(Cursor.class, new AwtCursorPersistenceDelegate());
-        delegates.put(Dimension.class, new AwtDimensionPersistenceDelegate());
-        delegates.put(Font.class, new AwtFontPersistenceDelegate());
-        delegates.put(Insets.class, new AwtInsetsPersistenceDelegate());
-        delegates.put(List.class, new AwtListPersistenceDelegate());
-        delegates.put(Menu.class, new AwtMenuPersistenceDelegate());
-        delegates.put(MenuBar.class, new AwtMenuBarPersistenceDelegate());
-        delegates.put(MenuShortcut.class,
-                new AwtMenuShortcutPersistenceDelegate());
-        delegates.put(Point.class, new AwtPointPersistenceDelegate());
-        delegates.put(Rectangle.class, new AwtRectanglePersistenceDelegate());
-        delegates.put(SystemColor.class,
-                new AwtSystemColorPersistenceDelegate());
-        delegates.put(TextAttribute.class,
-                new AwtFontTextAttributePersistenceDelegate());
 
-        delegates.put(Box.class, new SwingBoxPersistenceDelegate());
-        delegates.put(JFrame.class, new SwingJFramePersistenceDelegate());
-        delegates.put(JTabbedPane.class,
-                new SwingJTabbedPanePersistenceDelegate());
-        delegates.put(DefaultComboBoxModel.class,
-                new SwingDefaultComboBoxModelPersistenceDelegate());
-        delegates.put(ToolTipManager.class,
-                new SwingToolTipManagerPersistenceDelegate());
-        delegates.put(ScrollPane.class, new AwtScrollPanePersistenceDelegate());
 
         delegates.put(Date.class, new UtilDatePersistenceDelegate());
     }

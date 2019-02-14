@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.harmony.beans;
+package kava.beans.internal;
 
 public class BeansUtils {
     

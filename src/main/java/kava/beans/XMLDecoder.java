@@ -27,7 +27,7 @@ import java.util.Stack;
 
 import javax.xml.parsers.SAXParserFactory;
 
-import org.apache.harmony.beans.internal.nls.Messages;
+import kava.beans.internal.Messages;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
