@@ -18,8 +18,6 @@
 
 package kava.beans;
 
-import java.awt.SystemColor;
-import java.awt.font.TextAttribute;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
@@ -479,24 +477,14 @@ public class XMLEncoder extends Encoder
 			out.print("\"");
 		}
 
-		Object target = stat.getTarget();
-		if(target == SystemColor.class || target == TextAttribute.class) {
-			out.print(" field=\"");
-			out.print(stat.getArguments()[0]);
-			out.print("\"");
-			out.println("/>");
-
-		}
-		else {
-			out.print(" method=\"");
-			out.print(stat.getMethodName());
-			out.print("\"");
-			out.println(">");
-			Object fieldName = stat.getArguments()[0];
-			flushObject(fieldName, indent + INDENT_UNIT);
-			flushIndent(indent);
-			out.println("</object>");
-		}
+		out.print(" method=\"");
+		out.print(stat.getMethodName());
+		out.print("\"");
+		out.println(">");
+		Object fieldName = stat.getArguments()[0];
+		flushObject(fieldName, indent + INDENT_UNIT);
+		flushIndent(indent);
+		out.println("</object>");
 	}
 
 	@SuppressWarnings("nls")

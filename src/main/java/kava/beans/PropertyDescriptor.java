@@ -17,7 +17,6 @@
 
 package kava.beans;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
@@ -274,35 +273,5 @@ public class PropertyDescriptor extends FeatureDescriptor
                     "beans.64", setterName)); //$NON-NLS-1$
         }
         setWriteMethod(writeMethod);
-    }
-
-    public kava.beans.PropertyEditor createPropertyEditor(Object bean) {
-        kava.beans.PropertyEditor editor;
-        if (propertyEditorClass == null) {
-            return null;
-        }
-        if (!kava.beans.PropertyEditor.class.isAssignableFrom(propertyEditorClass)) {
-            // beans.48=Property editor is not assignable from the
-            // PropertyEditor interface
-            throw new ClassCastException(Messages.getString("beans.48")); //$NON-NLS-1$
-        }
-        try {
-            Constructor<?> constr;
-            try {
-                // try to look for the constructor with single Object argument
-                constr = propertyEditorClass.getConstructor(Object.class);
-                editor = (kava.beans.PropertyEditor) constr.newInstance(bean);
-            } catch (NoSuchMethodException e) {
-                // try no-argument constructor
-                constr = propertyEditorClass.getConstructor();
-                editor = (PropertyEditor) constr.newInstance();
-            }
-        } catch (Exception e) {
-            // beans.47=Unable to instantiate property editor
-            RuntimeException re = new RuntimeException(Messages
-                    .getString("beans.47"), e); //$NON-NLS-1$
-            throw re;
-        }
-        return editor;
     }
 }

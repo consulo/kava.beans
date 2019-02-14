@@ -17,28 +17,11 @@
 
 package kava.beans;
 
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.net.URL;
-
 public class SimpleBeanInfo implements kava.beans.BeanInfo
 {
 
     public SimpleBeanInfo() {
         // expected
-    }
-
-    public Image loadImage(String resourceName) {
-        if (null == resourceName) {
-            return null;
-        }
-        
-        URL file = getClass().getResource(resourceName);
-        
-        if (file != null) {
-            return Toolkit.getDefaultToolkit().createImage(file);
-        }
-        return null;
     }
 
     public PropertyDescriptor[] getPropertyDescriptors() {
@@ -58,10 +41,6 @@ public class SimpleBeanInfo implements kava.beans.BeanInfo
     }
 
     public BeanDescriptor getBeanDescriptor() {
-        return null;
-    }
-
-    public Image getIcon(int iconKind) {
         return null;
     }
 

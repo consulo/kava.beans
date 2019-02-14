@@ -19,7 +19,6 @@ package kava.beans;
 
 import static kava.beans.Introspector.decapitalize;
 
-import java.awt.Image;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
@@ -88,8 +87,6 @@ class StandardBeanInfo extends SimpleBeanInfo
 
     private static PropertyComparator comparator = new PropertyComparator();
 
-    private Object[] icon = new Object[4];
-
     private boolean canAddPropertyChangeListener;
 
     private boolean canRemovePropertyChangeListener;
@@ -130,9 +127,6 @@ class StandardBeanInfo extends SimpleBeanInfo
                 defaultPropertyIndex = -1;
             }
             additionalBeanInfo = explicitBeanInfo.getAdditionalBeanInfo();
-            for (int i = 0; i < 4; i++) {
-                icon[i] = explicitBeanInfo.getIcon(i + 1);
-            }
 
             if (events != null)
                 explicitEvents = true;
@@ -194,11 +188,6 @@ class StandardBeanInfo extends SimpleBeanInfo
     @Override
     public int getDefaultPropertyIndex() {
         return this.defaultPropertyIndex;
-    }
-
-    @Override
-    public Image getIcon(int iconKind) {
-        return (Image)icon[iconKind - 1];
     }
 
     void mergeBeanInfo(BeanInfo beanInfo, boolean force)

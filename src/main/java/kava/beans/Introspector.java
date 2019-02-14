@@ -51,7 +51,6 @@ import java.util.WeakHashMap;
  * </ol>
  * 
  */
-//ScrollPane cannot be introspected correctly
 public class Introspector extends java.lang.Object {
 
     // Public fields

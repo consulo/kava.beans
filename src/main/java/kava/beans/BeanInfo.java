@@ -17,18 +17,7 @@
 
 package kava.beans;
 
-import java.awt.Image;
-
 public interface BeanInfo {
-
-    public static final int ICON_COLOR_16x16 = 1;
-
-    public static final int ICON_COLOR_32x32 = 2;
-
-    public static final int ICON_MONO_16x16 = 3;
-
-    public static final int ICON_MONO_32x32 = 4;
-
     public PropertyDescriptor[] getPropertyDescriptors();
 
     public MethodDescriptor[] getMethodDescriptors();
@@ -38,8 +27,6 @@ public interface BeanInfo {
     public BeanInfo[] getAdditionalBeanInfo();
 
     public BeanDescriptor getBeanDescriptor();
-
-    public Image getIcon(int iconKind);
 
     public int getDefaultPropertyIndex();
 
