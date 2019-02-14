@@ -17,14 +17,14 @@
 
 package org.apache.harmony.beans;
 
-import java.beans.BeanInfo;
-import java.beans.Expression;
-import java.beans.IndexedPropertyDescriptor;
-import java.beans.IntrospectionException;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
-import java.beans.Statement;
-import java.beans.XMLDecoder;
+import kava.beans.BeanInfo;
+import kava.beans.Expression;
+import kava.beans.IndexedPropertyDescriptor;
+import kava.beans.IntrospectionException;
+import kava.beans.Introspector;
+import kava.beans.PropertyDescriptor;
+import kava.beans.Statement;
+import kava.beans.XMLDecoder;
 import java.lang.reflect.Array;
 import java.lang.reflect.Method;
 import java.util.HashMap;

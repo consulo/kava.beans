@@ -17,7 +17,7 @@
 
 package org.apache.harmony.beans.editors;
 
-import java.beans.PropertyEditorSupport;
+import kava.beans.PropertyEditorSupport;
 
 public final class FloatEditor extends PropertyEditorSupport {
 

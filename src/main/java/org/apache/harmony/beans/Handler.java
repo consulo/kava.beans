@@ -17,7 +17,7 @@
 
 package org.apache.harmony.beans;
 
-import java.beans.XMLDecoder;
+import kava.beans.XMLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
