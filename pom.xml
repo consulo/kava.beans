@@ -6,21 +6,28 @@
 
 	<groupId>consulo</groupId>
 	<artifactId>kava.beans</artifactId>
-	<version>2-SNAPSHOT</version>
+	<version>1.0</version>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>consulo</id>
+			<url>https://maven.consulo.io/repository/snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.7.0</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-					<showDeprecation>true</showDeprecation>
-					<showWarnings>true</showWarnings>
-					<fork>true</fork>
-					<encoding>UTF-8</encoding>
+					<source>8</source>
+					<target>8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -32,6 +39,28 @@
 						<id>attach-sources</id>
 						<goals>
 							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>consulo.maven</groupId>
+				<artifactId>java9-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>java9</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate-source-module-info</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>pre-java9</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>generate-binary-module-info-nocheck</goal>
 						</goals>
 					</execution>
 				</executions>
