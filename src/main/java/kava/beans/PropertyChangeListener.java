@@ -19,7 +19,7 @@ package kava.beans;
 
 import java.util.EventListener;
 
+@FunctionalInterface
 public interface PropertyChangeListener extends EventListener {
-
     public void propertyChange(PropertyChangeEvent event);
 }
